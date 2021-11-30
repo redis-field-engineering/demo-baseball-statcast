@@ -4,6 +4,7 @@ def processPitch(pitch):
     """
 
 
+    # Add the pitch count to a sorted set
     execute(
 	    "ZINCRBY",
 	    '{}:historical_pitch_count'.format(pitch['value']['pitcher.1']),
@@ -22,7 +23,28 @@ def processPitch(pitch):
 		    '{}:historical_pitch_percent'.format(pitch['value']['pitcher.1']),
 		    round(100*int(current_count[i])/total_pitches,2),
 		    current_pitch[i])
-    execute("SET", "DEBUG", current_count)
+
+    # Average the pitch speed per pitch type
+    count_by_pitch = execute(
+	    "HINCRBY",
+	    '{}:historical_pitch_speed:{}'.format(pitch['value']['pitcher.1'], pitch['value']['pitch_type']),
+	    'count',
+	    1 )
+    if int(count_by_pitch) == 1:
+	    new_avg = pitch['value']['effective_speed']
+    else:
+	    avg_by_pitch = execute(
+		    "HGET",
+		    '{}:historical_pitch_speed:{}'.format(pitch['value']['pitcher.1'], pitch['value']['pitch_type']),
+		    'average')
+	    new_average = ((count_by_pitch - 1) * float(avg_by_pitch) + float(pitch['value']['effective_speed']))/int(count_by_pitch)
+
+    execute(
+	"HSET",
+    	'{}:historical_pitch_speed:{}'.format(pitch['value']['pitcher.1'], pitch['value']['pitch_type']),
+    	'average',
+	pitch['value']['effective_speed'])
+
 
 
 gb = GearsBuilder(
