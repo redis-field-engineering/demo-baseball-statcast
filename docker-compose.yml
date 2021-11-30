@@ -20,7 +20,6 @@ services:
     image: "maguec/grafanaleaderboard:latest"
     environment:
         - REDIS_SERVER=redis
-        - REDIS_LEADERBOARD_SET=LeaderBoards
     depends_on:
       - redis
     ports:

@@ -1,3 +1,6 @@
 *.csv
 .venv/*
 notes
+terraform/.terraform
+terraform/.terrafor*
+terraform/terraform.tfsta*
