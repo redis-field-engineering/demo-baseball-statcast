@@ -117,6 +117,84 @@
       "type": "table"
     },
     {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pitch"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 74
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "velocity"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 107
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 8,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "command": "hget",
+          "field": "average",
+          "keyName": "456501:historical_pitch_speed:FF",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "4-Seam MPH",
+      "type": "table"
+    },
+    {
       "datasource": "SimpleJson",
       "fieldConfig": {
         "defaults": {
@@ -146,8 +224,8 @@
       },
       "gridPos": {
         "h": 10,
-        "w": 4,
-        "x": 8,
+        "w": 3,
+        "x": 11,
         "y": 0
       },
       "id": 5,
@@ -158,11 +236,11 @@
       "targets": [
         {
           "refId": "A",
-          "target": "LeaderBoard-Users",
+          "target": "456501:real_time_pitch_count",
           "type": "table"
         }
       ],
-      "title": "Leading Players",
+      "title": "Real Time Pitch Count",
       "type": "table"
     },
     {
@@ -191,17 +269,43 @@
             ]
           }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pitch"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 74
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "velocity"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 107
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 10,
-        "w": 5,
-        "x": 12,
+        "w": 3,
+        "x": 14,
         "y": 0
       },
       "id": 15,
       "options": {
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": []
       },
       "pluginVersion": "8.0.2",
       "targets": [
@@ -215,6 +319,162 @@
         }
       ],
       "title": "Last Pitch",
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pitch"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 74
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "velocity"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 107
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 8,
+        "y": 3
+      },
+      "id": 17,
+      "options": {
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "command": "hget",
+          "field": "average",
+          "keyName": "456501:historical_pitch_speed:SL",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Slider MPH",
+      "type": "table"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pitch"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 74
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "velocity"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 107
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 8,
+        "y": 6
+      },
+      "id": 19,
+      "options": {
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "command": "hget",
+          "field": "average",
+          "keyName": "456501:historical_pitch_speed:SI",
+          "query": "",
+          "refId": "A",
+          "type": "command"
+        }
+      ],
+      "title": "Sinker MPH",
       "type": "table"
     },
     {
@@ -329,7 +589,7 @@
       "targets": [
         {
           "command": "hget",
-          "field": "balls",
+          "field": "ball",
           "keyName": "current_game",
           "query": "",
           "refId": "A",
@@ -390,7 +650,7 @@
       "targets": [
         {
           "command": "hget",
-          "field": "strikes",
+          "field": "called_strike",
           "keyName": "current_game",
           "query": "",
           "refId": "A",
@@ -408,7 +668,7 @@
             "mode": "palette-classic"
           },
           "custom": {
-            "axisLabel": "Matches per Second",
+            "axisLabel": "MPH",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
@@ -453,8 +713,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 12,
+        "h": 5,
+        "w": 11,
         "x": 6,
         "y": 10
       },
@@ -471,23 +731,187 @@
       },
       "targets": [
         {
-          "aggregation": "count",
-          "bucket": 80,
+          "aggregation": "avg",
+          "bucket": 2,
           "command": "ts.range",
-          "fill": true,
+          "fill": false,
           "filter": "matches",
-          "keyName": "match",
-          "legend": "",
+          "keyName": "ts:velocity:4-SeamFastball",
+          "legend": "4-Seam Fastball",
           "query": "",
           "refId": "A",
           "type": "timeSeries"
+        },
+        {
+          "aggregation": "avg",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:velocity:Slider",
+          "legend": "Slider",
+          "query": "",
+          "refId": "B",
+          "type": "timeSeries"
+        },
+        {
+          "aggregation": "avg",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:velocity:Changeup",
+          "legend": "Changeup",
+          "query": "",
+          "refId": "C",
+          "type": "timeSeries"
+        },
+        {
+          "aggregation": "avg",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:velocity:Sinker",
+          "legend": "Sinker",
+          "query": "",
+          "refId": "D",
+          "type": "timeSeries"
         }
       ],
-      "title": "Matches",
+      "title": "Velocity",
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "Fastballs",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 11,
+        "x": 6,
+        "y": 15
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "aggregation": "",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "keyName": "ts:count:4-SeamFastball",
+          "legend": "4-Seam Fastball",
+          "query": "",
+          "refId": "A",
+          "type": "timeSeries"
+        },
+        {
+          "aggregation": "",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:count:Slider",
+          "legend": "Slider",
+          "query": "",
+          "refId": "B",
+          "type": "timeSeries"
+        },
+        {
+          "aggregation": "",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:count:Changeup",
+          "legend": "Changeup",
+          "query": "",
+          "refId": "C",
+          "type": "timeSeries"
+        },
+        {
+          "aggregation": "",
+          "bucket": 2,
+          "command": "ts.range",
+          "fill": false,
+          "filter": "matches",
+          "hide": false,
+          "keyName": "ts:count:Sinker",
+          "legend": "Sinker",
+          "query": "",
+          "refId": "D",
+          "type": "timeSeries"
+        }
+      ],
+      "title": "Count",
       "type": "timeseries"
     }
   ],
-  "refresh": "5s",
+  "refresh": false,
   "schemaVersion": 30,
   "style": "dark",
   "tags": [],
@@ -495,8 +919,8 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
-    "to": "now"
+    "from": "2021-11-30T20:48:18.441Z",
+    "to": "2021-11-30T20:51:56.785Z"
   },
   "timepicker": {},
   "timezone": "",
