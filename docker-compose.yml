@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  redis:
+    image: "redislabs/redismod:edge"
+    ports:
+      - "6379:6379"
+  grafana:
+    image: "grafana/grafana:latest"
+    links:
+      - "redis:redis"
+      - "leaderboard:leaderboard"
+    ports:
+      - "3000:3000"
+    environment:
+        - GF_INSTALL_PLUGINS=redis-datasource,grafana-simple-json-datasource
+    depends_on:
+      - leaderboard
+  leaderboard:
+    image: "maguec/grafanaleaderboard:latest"
+    environment:
+        - REDIS_SERVER=redis
+        - REDIS_LEADERBOARD_SET=LeaderBoards
+    depends_on:
+      - redis
+    ports:
+      - "5000:5000"
