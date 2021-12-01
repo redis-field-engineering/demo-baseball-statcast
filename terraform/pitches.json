@@ -911,7 +911,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": false,
+  "refresh": "1s",
   "schemaVersion": 30,
   "style": "dark",
   "tags": [],
@@ -919,12 +919,12 @@
     "list": []
   },
   "time": {
-    "from": "2021-11-30T20:48:18.441Z",
-    "to": "2021-11-30T20:51:56.785Z"
+    "from": "now-5m",
+    "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Pitches",
   "uid": "OYw4XXtnk",
-  "version": 3
+  "version": 5
 }
