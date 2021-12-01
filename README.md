@@ -1,7 +1,33 @@
-## Example of processing statcast data in real time using Redis Gears and time series.
+## Example of processing statcast data in real time using Redis Gears and Redis Time Series.
+
+### Architecture
+
+![img](docs/baseball_demo.svg)
+
+
+### Screenshot
+
+![img](docs/screenshot.png)
+
+
+### Setup
+
+#### Start the containers
+
+```
+docker-compose up
+```
+
+#### Use terraform to setup the grafana instance
+
+```
+cd terraform && terraform init && terraform apply
+```
 
 
 ### Grab some data
+
+Note the Grafana dashboards are hard coded now for Johnny Cueto pitching because a Giants fan got to decide.
 
 ```
 >>> from pybaseball import statcast_pitcher
@@ -25,3 +51,9 @@ redis-cli flushdb && ./load_gears.sh && ./stream_data.py cueto_ytd.csv Historica
 ```
 ./stream_data.py cueto_0803.csv RealTimePitches 1500
 ```
+
+### View the dashboard in real time
+
+[Dashboard Link](http://localhost:3000/d/OYw4XXtnk/pitches?orgId=1&from=now-15m&to=now&refresh=1s)
+
+The login is admin/admin
