@@ -24,6 +24,13 @@ docker-compose up
 cd terraform && terraform init && terraform apply
 ```
 
+#### Setup a virtual environment in python
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ### Grab some data
 
