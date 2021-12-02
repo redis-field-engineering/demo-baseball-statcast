@@ -12,6 +12,12 @@
 
 ### Setup
 
+### Prerequisites 
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Terraform](https://www.terraform.io/downloads.html)
+
+
 #### Start the containers
 
 ```
