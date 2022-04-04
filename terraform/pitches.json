@@ -8,18 +8,28 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "editable": true,
-  "gnetId": null,
+  "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 1,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
-      "datasource": "SimpleJson",
+      "datasource": {
+        "type": "grafana-simple-json-datasource",
+        "uid": "Y6D_xjs7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -54,9 +64,16 @@
       },
       "id": 2,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "refId": "A",
@@ -68,7 +85,10 @@
       "type": "table"
     },
     {
-      "datasource": "SimpleJson",
+      "datasource": {
+        "type": "grafana-simple-json-datasource",
+        "uid": "Y6D_xjs7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -103,9 +123,16 @@
       },
       "id": 4,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "refId": "A",
@@ -117,7 +144,6 @@
       "type": "table"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -171,16 +197,23 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
+        "w": 6,
         "x": 8,
         "y": 0
       },
       "id": 18,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -195,7 +228,10 @@
       "type": "table"
     },
     {
-      "datasource": "SimpleJson",
+      "datasource": {
+        "type": "grafana-simple-json-datasource",
+        "uid": "Y6D_xjs7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -224,15 +260,22 @@
       },
       "gridPos": {
         "h": 10,
-        "w": 3,
-        "x": 11,
+        "w": 4,
+        "x": 14,
         "y": 0
       },
       "id": 5,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "refId": "A",
@@ -244,7 +287,6 @@
       "type": "table"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -298,16 +340,23 @@
       },
       "gridPos": {
         "h": 10,
-        "w": 3,
-        "x": 14,
+        "w": 4,
+        "x": 18,
         "y": 0
       },
       "id": 15,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hgetall",
@@ -322,7 +371,6 @@
       "type": "table"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -376,16 +424,23 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
+        "w": 6,
         "x": 8,
         "y": 3
       },
       "id": 17,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -400,7 +455,6 @@
       "type": "table"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -453,17 +507,24 @@
         ]
       },
       "gridPos": {
-        "h": 3,
-        "w": 3,
+        "h": 4,
+        "w": 6,
         "x": 8,
         "y": 6
       },
       "id": 19,
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -478,7 +539,6 @@
       "type": "table"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -524,7 +584,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -539,7 +599,6 @@
       "type": "stat"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -585,7 +644,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -600,7 +659,6 @@
       "type": "stat"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -646,7 +704,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.0.2",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "command": "hget",
@@ -661,7 +719,6 @@
       "type": "stat"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -714,7 +771,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 11,
+        "w": 16,
         "x": 6,
         "y": 10
       },
@@ -726,7 +783,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "single",
+          "sort": "none"
         }
       },
       "targets": [
@@ -786,7 +844,6 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -839,7 +896,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 11,
+        "w": 16,
         "x": 6,
         "y": 15
       },
@@ -851,7 +908,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "single",
+          "sort": "none"
         }
       },
       "targets": [
@@ -911,8 +969,8 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "1s",
-  "schemaVersion": 30,
+  "refresh": "5s",
+  "schemaVersion": 35,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -926,5 +984,6 @@
   "timezone": "",
   "title": "Pitches",
   "uid": "OYw4XXtnk",
-  "version": 5
+  "version": 2,
+  "weekStart": ""
 }
